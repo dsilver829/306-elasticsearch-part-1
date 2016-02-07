@@ -6,4 +6,9 @@ class Article < ActiveRecord::Base
 
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
+
+  def self.search(params)
+    query = params[:query] ? params[:query].to_s : "*:*"
+    __elasticsearch__.search(query).records
+  end
 end
