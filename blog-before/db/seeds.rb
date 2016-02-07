@@ -13,6 +13,10 @@ krypton = Article.create! name: "Krypton", author: clark, published_at: 5.weeks.
 Krypton is a fictional planet in the DC Comics universe, and the native world of the super-heroes Superman and, in some tellings, Supergirl and Krypto the Superdog. Krypton has been portrayed consistently as having been destroyed just after Superman's flight from the planet, with exact details of its destruction varying by time period, writers and franchise. Kryptonians were the dominant people of Krypton. (from Wikipedia)
 ARTICLE
 
+upcoming = Article.create! name: "Upcoming", author: clark, published_at: Date.today + 1.day, content: <<-ARTICLE
+This article will be published tomorrow.
+ARTICLE
+
 Comment.create! name: "Lois Lane", article: superman, content: <<-COMMENT
 I want to meet Superman again, does anyone know where I can find him?
 COMMENT
